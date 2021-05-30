@@ -1,0 +1,50 @@
+[push]
+	default = simple
+[user]
+	email = hukuuu@gmail.com
+	name = hukuuu
+[merge]
+	tool = kdiff3
+[diff]
+	guitool = kdiff3
+[core]
+	autocrlf = false
+        editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[color]
+	ui = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[alias]
+        ps = push
+        pl = pull
+        f = fetch
+        m = merge
+	s = status --short
+	co = checkout
+        b = branch
+        cm = commit
+        d = diff
+        dc = diff --cached
+        a = add
+        ai = add -i
+        r = rebase
+        rs = reset
+        rv = revert
+	l = log -15 --decorate --graph --pretty=format:'%C(auto)%d%Creset %Cgreen%h%Creset %s -> %C(yellow)%an%Creset, %ar'
+        la = log -15 --all --decorate --graph --pretty=format:'%C(auto)%d%Creset %Cgreen%h%Creset %s -> %C(yellow)%an%Creset, %ar'
+	up = pull --rebase --autostash
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
